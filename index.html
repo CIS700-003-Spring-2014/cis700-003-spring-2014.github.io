@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>CIS 700/003: Real-Time Rendering. Spring 2014.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+body { 
+    font-family:"Helvetica";
+}
+</style>
+
+</head>
+
+<body>
+
+<table border="0" summary="" width="800">
+    <tr align="center">
+        <td>
+            <h1>CIS 700/003: Real-Time Rendering</h1>
+            <p align="center">
+            Spring 2014<br/>
+			<a href="http://www.seas.upenn.edu/~pcozzi/">Patrick Cozzi</a>
+            </p>
+            <p align="center">
+            University of Pennsylvania<br />
+            <a href="http://cg.cis.upenn.edu/index.html">Computer Graphics @ Penn</a><br/><br/>
+            <img src="images/banner.png" width="640" height="120" alt="Student Projects" /><br />
+            </p>
+        </td>
+        <td valign="top">
+            <img src ="images/shield.gif" width="63" height="70" alt="University of Pennsylvania" />
+        </td>
+    </tr>
+<!--
+TODO
+    <tr align="center">
+        <td>
+            <br />
+            Course Overview &bullet; 
+            <a href="faq.html">FAQ</a> &bullet; 
+            <a href="schedule.html">Schedule</a> &bullet;
+            <a href="studentwork.html">Student Work</a> &bullet; 
+            <a href="http://cis565-fall-2012.github.com/">Previous semester</a>
+        </td>
+    </tr>
+-->
+</table>
+<br />
+
+<table border="0" summary="" width="800">
+<tr><td>
+<p>
+This pragmatic course prepares you to be an engine or tools developer in games or any industry using real-time graphics.  As a class, we will build a graphics engine from the ground up designed for today's GPUs with programmable vertex, fragment, geometry, tessellation, and compute shaders.  In addition to graphics, we'll learn software design, teamwork, source control (git), profiling tools (web tracing framework), and software development best practices (code reviews in particular).
+</p>
+<p>
+This course is ran like a startup with the students as founders, the teaching assistant as CTO, and the instructor as the board of directors.
+</p>
+<p>
+Expect a ton of work.  We will write a lot of code, read lots of papers, and give talks.
+</p>
+
+<h2>Prerequisites</h2>
+<p>
+This course is limited to 10 students, who must have:
+</p>
+<ul>
+<li>Passion for computer graphics.</li>
+<li>Strong C++ and basic familiarly with OpenGL.</li>
+<li><a href="http://www.cis.upenn.edu/~badler/courses/cis560.html">CIS 460/560</a>: Introduction to Computer Graphics.  Preferably received an A.</li>
+</ul>
+
+<h2>Instructor</h2>
+<p>
+<a href="http://www.seas.upenn.edu/~pcozzi/">Patrick Cozzi</a>, pjcozzi+cis700@gmail.com<br/>
+Office Hours: By appointment
+</p>
+
+<h2>Teaching Assistant</h2>
+<p>
+<a href="http://www.linkedin.com/in/chengtsolin">Cheng-Tso Lin</a>, otaku690@gmail.com<br />
+Office: TBA<br />
+Office Hours: TBA
+</p>
+
+<h2>Meeting</h2>
+<p>
+Monday, 6-9pm, SIG lab conference room<br />
+</p>
+<ul>
+<li>Google Group: <a href="https://groups.google.com/forum/#!forum/cis700-003-spring-2014">cis700-003-spring-2014@googlegroups.com</a> for discussion</li>
+<li><a href="https://github.com/CIS700-003-Spring-2014">GitHub Organization</a> for code collaboration</li>
+</ul>
+
+<h2>Projects</h2>
+<p>
+We will build:
+<li>A content pipeline for optimizing geometry and texture assets</li>
+<li>A traditional forward shading engine in WebGL targeting the web and mobile devices</li>
+<li>A deferred shading engine in OpenGL 4.3 targeting desktops</li>
+<li>Engines will include</li>
+<ul>
+   <li>Visibility system for efficient culling</li>
+   <li>Shadows (shadow map pass)</li>
+   <li>Reflections and refractions (cube map pass)</li>
+   <li>Sorting opaque geometry for performance</li>
+   <li>Sorting translucent geometry for blending</li>
+   <li>Script-driven particle system for smoke, fire, etc.</li>
+   <li>Script-driven PostFX system for depth of field, motion blur, etc.</li>
+</ul>
+</p>
+<p>
+We will also have an open-ended project where we each extend the engine.  Potential projects include:
+<ul>
+   <li>Order-independent translucency with atomics and image load/store</li>
+   <li>Deep shadow maps for translucent shadows with compute shaders</li>
+   <li>Forward+ shading with compute shaders</li>
+   <li>Terrain and ocean rendering with tessellation shaders</li>
+   <li>Animation system with vertex-shader skinning and compute-shader flocking</li>
+   <li>Comparison of anti-aliasing techniques</li>
+   <li>Non-photorealistic rendering</li>
+   <li>Volumetric clouds</li>
+   <li>Major optimizations such as instancing</li>
+   <li>GPU-accelerated collision detection and physics</li>
+   <li>Input devices such as leap motion controller and Kinect</li>
+   <li>Foliage system, tools + engine</li>
+   <li>Skin, hair, and fur</li>
+   <li>Building an app on the engine</li>
+</ul>
+</p>
+
+<h2>Papers and Talks</h2>
+
+To support our engine development, we'll read selected
+<ul>
+<li>Chapters from the <a href="http://www.openglsuperbible.com/" target="_blank">OpenGL SuperBible</a>, <a href="http://www.realtimerendering.com/" target="_blank">Real-Time Rendering</a> (2008), and <a href="http://openglinsights.com/" target="_blank">OpenGL Insights</a> (2012)</li>
+<li>Papers and courses from major conferences including SIGGRAPH, GDC, and I3D</li>
+</ul>
+
+Each student will give a couple 40-minute talks throughout the semester to bring the rest of the team up to speed on a topic so we can collectively decide how it will fit into our engine.  Every week a student will either be preparing a talk or writing engine code.
+
+<h2>Profiling</h2>
+
+We will have a major focus on performance.  In addition to our topic talks, we will each select an open-source WebGL engine/app to profile with <a href="https://github.com/google/tracing-framework" target="_blank">Web Tracing Framework</a>.  We will give a 10-minute talk on our analysis including optimization recommendations.
+
+<h2>Grades</h2>
+<ul>
+<li>30% engine development - we all get the same grade</li>
+<li>35% final project (engine extension)</li>
+<li>35% talks, including profiling analysis</li>
+</ul>
+
+<h2>Academic Integrity</h2>
+<p>
+An academic integrity violation will result in an F in this course.  See <a href="http://www.upenn.edu/academicintegrity/">Academic Integrity at the University of Pennsylvania: A Guide for Students</a>.
+</p>
+
+<h2>Hardware</h2>
+<p>
+You must have a video card that supports OpenGL 4.3.  Visual Studio is also required for our C++ development.
+</p>
+
+<h2>Relationship to CIS 565</h2>
+<p>
+This course and <a href="http://www.seas.upenn.edu/~cis565/">CIS 565</a> (GPU Programming and Architecture) both cover graphics development using the GPU.  The difference is that CIS 565 covers more GPU architecture and GPU computing (general massively parallel programming) and has several smaller projects.  This course focuses purely on graphics, using WebGL and OpenGL, and engine development in general.
+</p>
+<p>
+This course is recommended for students who can't take CIS 565 in Fall 2014.
+</p>
+
+</td></tr>
+</table>    
+
+</body>
+</html>
