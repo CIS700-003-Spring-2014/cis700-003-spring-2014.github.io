@@ -12,8 +12,9 @@ body {
 </head>
 
 <body>
+<a href="https://github.com/CIS700-003-Spring-2014" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
-<table border="0" summary="" width="800">
+<table border="0" summary="" width="820">
     <tr align="center">
         <td>
             <h1>CIS 700/003: Real-Time Rendering</h1>
@@ -47,7 +48,7 @@ TODO
 </table>
 <br />
 
-<table border="0" summary="" width="800">
+<table border="0" summary="" width="820">
 <tr><td>
 <p>
 This pragmatic course prepares you to be an engine or tools developer in games or any industry using real-time graphics.  As a class, we will build a graphics engine from the ground up designed for today's GPUs with programmable vertex, fragment, geometry, tessellation, and compute shaders.  In addition to graphics, we'll learn software design, teamwork, source control (git), profiling tools (web tracing framework), and software development best practices (code reviews in particular).
@@ -99,6 +100,7 @@ We will build:
 <li>A deferred shading engine in OpenGL 4.3 targeting desktops</li>
 <li>Engines will include</li>
 <ul>
+   <li>Asset important</li>
    <li>Visibility system for efficient culling</li>
    <li>Shadows (shadow map pass)</li>
    <li>Reflections and refractions (cube map pass)</li>
@@ -106,6 +108,7 @@ We will build:
    <li>Sorting translucent geometry for blending</li>
    <li>Script-driven particle system for smoke, fire, etc.</li>
    <li>Script-driven PostFX system for depth of field, motion blur, etc.</li>
+   <li>Anti-aliasing</li>
 </ul>
 </p>
 <p>
@@ -116,37 +119,62 @@ We will also have an open-ended project where we each extend the engine.  Potent
    <li>Forward+ shading with compute shaders</li>
    <li>Terrain and ocean rendering with tessellation shaders</li>
    <li>Animation system with vertex-shader skinning and compute-shader flocking</li>
-   <li>Comparison of anti-aliasing techniques</li>
    <li>Non-photorealistic rendering</li>
    <li>Volumetric clouds</li>
    <li>Major optimizations such as instancing</li>
    <li>GPU-accelerated collision detection and physics</li>
    <li>Input devices such as leap motion controller and Kinect</li>
    <li>Foliage system, tools + engine</li>
+   <li>Decal system</li>
    <li>Skin, hair, and fur</li>
    <li>Building an app on the engine</li>
 </ul>
 </p>
 
 <h2>Papers and Talks</h2>
-
+<p>
 To support our engine development, we'll read selected
+</p>
 <ul>
 <li>Chapters from the <a href="http://www.openglsuperbible.com/" target="_blank">OpenGL SuperBible</a> (2013), <a href="http://www.realtimerendering.com/" target="_blank">Real-Time Rendering</a> (2008), and <a href="http://openglinsights.com/" target="_blank">OpenGL Insights</a> (2012)</li>
-<li>Papers and courses from major conferences including SIGGRAPH, GDC, and I3D</li>
+<li>Papers and courses from major journals and conferences including <a href="http://jcgt.org/" target="_blank">JCGT</a>, SIGGRAPH, GDC, and I3D</li>
 </ul>
-
+<p>
 Each student will give a couple 40-minute talks throughout the semester to bring the rest of the team up to speed on a topic so we can collectively decide how it will fit into our engine.  Every week a student will either be preparing a talk or writing engine code.
+</p>
+<p>
+Selected OpenGL Insights chapters:
+<ul>
+  <li><em>WebGL for OpenGL Developers</em> by Patrick Cozzi and Scott Hunter</li>
+  <li><em>An Introduction to Tessellation Shaders</em> by Philip Rideout and Dirk Van Gelder</li>
+  <li><a href="http://www.seas.upenn.edu/~pcozzi/OpenGLInsights/OpenGLInsights-TileBasedArchitectures.pdf" target="_blank">Performance Tuning for Tile-Based Architectures</a> by Bruce Merry</li>
+  <li><em>Exploring Mobile vs. Desktop OpenGL Performance</em> by Jon McCaffrey</li>
+  <li><a href="http://www.seas.upenn.edu/~pcozzi/OpenGLInsights/OpenGLInsights-AsynchronousBufferTransfers.pdf" target="_blank">Asynchronous Buffer Transfers</a> by Ladislav Hrabcak and Arnaud Masserann</li>
+  <li><a href="http://www.seas.upenn.edu/~pcozzi/OpenGLInsights/OpenGLInsights-ARB_debug_output.pdf" target="_blank">ARB_debug_output: A Helping Hand for Desperate Developers</a> by António Ramires Fernandes and Bruno Oliveira</li>
+  <li><em>The OpenGL Timer Query</em> by Christopher Lux</li>
+</ul>
+</p>
+<p>
+Selected JCGT papers:
+<ul>
+  <li><a href="" target="_blank">The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading</a> (2013) by Christopher A. Burns and Warren A. Hunt</li>
+  <li><a href="http://jcgt.org/published/0002/02/05/" target="_blank">2D Polyhedral Bounds of a Clipped, Perspective-Projected 3D Sphere</a> (2013) by Michael Mara and Morgan McGuire</li>
+  <li><a href="" target="_blank">Weighted Blended Order-Independent Transparency</a> (2013) by Morgan McGuire and Louis Bavoil</li>
+  <li><a href="http://jcgt.org/published/0002/01/01/" target="_blank">Adaptive Supersampling for Deferred Anti-Aliasing</a> (2013) by Matthias Hollander, Tamy Boubekeur, and Elmar Eisemann</li>
+  <li><a href="http://jcgt.org/published/0001/01/02/" target="_blank">The Compact YCoCg Frame Buffer</a> (2012) by Pavlos Mavridis and 	Georgios Papaioannou</li>
+</ul>
+</p>
 
 <h2>Profiling</h2>
-
+<p>
 We will have a major focus on performance.  In addition to our topic talks, we will each select an open-source WebGL engine/app to profile with <a href="https://github.com/google/tracing-framework" target="_blank">Web Tracing Framework</a>.  We will give a 10-minute talk on our analysis including optimization recommendations.
+</p>
 
 <h2>Grades</h2>
 <ul>
-<li>30% engine development: 15% class and 15% individual</li>
-<li>35% final project (engine extension)</li>
-<li>35% talks, including profiling analysis</li>
+<li>40% engine development: 20% class and 20% individual</li>
+<li>30% final project (engine extension)</li>
+<li>30% talks, including profiling analysis</li>
 </ul>
 
 <h2>Academic Integrity</h2>
